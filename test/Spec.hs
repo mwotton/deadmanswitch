@@ -40,7 +40,7 @@ spec = do
     it "unix signal" $ do
       fp <- emptySystemTempFile "deadDrop"
 
-      pid <- forkProcess $ deadmanSwitch (writeFile fp graffiti) $ forever $ threadDelay 1000000
+      pid <- forkProcess $ deadmanSwitch (appendFile fp graffiti) $ forever $ threadDelay 1000000
       -- haaaaack
       threadDelay 10000
       signalProcess sigTERM pid
