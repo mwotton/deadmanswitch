@@ -1,0 +1,29 @@
+name:                deadmanswitch
+version:             0.1.0.0
+#synopsis:
+#description:
+homepage:            https://github.com/githubuser/deadmanswitch#readme
+license:             BSD3
+author:              Author name here
+maintainer:          example@example.com
+copyright:           2018 Author name here
+category:            Web
+extra-source-files:
+- README.md
+
+dependencies:
+  - base >= 4.7 && < 5
+  - async
+  - extra
+library:
+  source-dirs:      src
+tests:
+  spec:
+    main: Spec.hs
+    source-dirs: test
+    dependencies:
+    - hspec
+    - deadmanswitch
+    - temporary
+    - directory
+    - unix
